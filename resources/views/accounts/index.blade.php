@@ -42,6 +42,15 @@
                                 </button>
                             </div>
                         </form>
+                        <form action="{{ route('accounts.destroy', $account->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button 
+                                type="submit"
+                                class="mt-3 px-3 h-10 rounded-sm bg-red-gradient text-white font-medium w-full">
+                              Delete Account
+                            </button>
+                        </form>
                     </div>
                 </li>
             @endforeach
